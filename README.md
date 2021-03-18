@@ -1,6 +1,6 @@
 # nsis-o-matik
 
-# “NSIS-o-Matik” - Analisi, Progettazione e Sviluppo di un applicativo per il download automatico dei Flussi dalla piattaforma del Ministero della Salute (NSIS)
+Analisi, Progettazione e Sviluppo di un applicativo per il download automatico dei Flussi dalla piattaforma del Ministero della Salute (NSIS)
 
 L’argomento specifico di riferimento riguarda i flussi ministeriali (economici e informativi) provenienti da NSIS, Piattaforma Business Object SAP, gestita dal Ministero della Salute. Si tratta dello strumento attraverso il quale lo stesso Ministero della Salute gestisce, a livello nazionale e regionale, un patrimonio di dati, di regole e metodologie per misure di qualità, efficienza, appropriatezza e costo, a supporto del governo del SSN, del monitoraggio dei LEA e della spesa sanitaria, condiviso fra i vari livelli istituzionali e centrato sul cittadino.
 
