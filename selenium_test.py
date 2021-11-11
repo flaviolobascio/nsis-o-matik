@@ -1,35 +1,13 @@
 import time
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
- 
- 
-def init_driver():
-    # driver = webdriver.Firefox()
-    driver = webdriver.Chrome()
-    driver.wait = WebDriverWait(driver, 5)
-    return driver
- 
- 
-def lookup(driver, query):
-    driver.get("http://www.google.com")
-    try:
-        box = driver.wait.until(EC.presence_of_element_located(
-            (By.NAME, "q")))
-        button = driver.wait.until(EC.element_to_be_clickable(
-            (By.NAME, "btnK")))
-        box.send_keys(query)
-        buttonG = driver.wait.until(EC.element_to_be_clickable(
-            (By.NAME, "btnG")))
-        buttonG.click()
-    except TimeoutException:
-        print("Box or Button not found in google.com")
- 
- 
-if __name__ == "__main__":
-    driver = init_driver()
-    lookup(driver, "Selenium")
-    time.sleep(5)
-    driver.quit()
+from webdriver_manager.chrome import ChromeDriverManager
+
+driver = webdriver.Chrome(ChromeDriverManager().install())
+# driver = webdriver.Chrome()  # Optional argument, if not specified will search path.
+driver.get('http://www.google.com/');
+time.sleep(5) # Let the user actually see something!
+search_box = driver.find_element_by_name('q')
+search_box.send_keys('ChromeDriver')
+search_box.submit()
+time.sleep(5) # Let the user actually see something!
+driver.quit()
